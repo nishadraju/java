@@ -14,7 +14,7 @@ public class Count_Vowel_Consonant {
 
 		for (i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
-			if (c >= 'A' && c <= 'Z') { // केवल अक्षर ही गिने जाएंगे
+			if (c >= 'A' && c <= 'Z') {
 				if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
 					vol++;
 				} else {
@@ -26,6 +26,7 @@ public class Count_Vowel_Consonant {
 		System.out.println("Number of vowels: " + vol);
 		System.out.println("Number of consonants: " + con);
 
-		sc.close(); // Scanner को बंद करना अच्छा अभ्यास है
+		sc.close(); 
 	}
 }
+
