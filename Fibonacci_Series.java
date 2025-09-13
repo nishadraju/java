@@ -1,22 +1,23 @@
-
-public class Fibonacci_Series {
-	
+package Practice1;
+import java.util.Scanner;
+public class fabonacic {
 	public static void main(String[] args) {
-		
-		int n=10, num1=0, num2=1;
-		
-		System.out.println("Fibonacci Series:"+num1+","+num2);
-		
-		for(int i=2;i<n;i++) {
-			int num3=num1+num2;
-			System.out.println(","+num3);
-			num1=num2;
-			num2=num3;
-			
-			
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the number--->");
+		int num = sc.nextInt();
+
+		int x = 0;
+		int y = 1;
+		int z = 0;
+
+		while (z <= num) {
+
+			x = y;
+			y = z;
+			z = x + z;
+			System.out.println(z);
 		}
-		
-		
 	}
 
 }
