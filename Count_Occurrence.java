@@ -1,39 +1,29 @@
-package String;
+package Practice1_String;
 
-import java.security.KeyStore.Entry;
-import java.util.HashMap;
-import java.util.Map;
-
-public class Count_Occurrence {
+public class count_Occurance {
 	public static void main(String[] args) {
 
-		String input = "javajavaEE";
+		String input = "javajavaee";
 
-		Map<Character, Integer> countDuplicateMap = new HashMap();
+		for (int i = 0; i < input.length(); i++) {
+			char c = input.charAt(i);
+			int count = 0;
 
-		char[] charArray = input.toCharArray();
+			for (int j = 0; j < input.length(); j++) {
+				if (c == input.charAt(j)) {
+					count++;
 
-		for (char c : charArray) {
+				}
 
-			if (countDuplicateMap.containsKey(c)) {
+			}
+			if (input.indexOf(c) == i) {
+				System.out.println(c + ":" + count);
 
-				countDuplicateMap.put(c, countDuplicateMap.get(c) + 1);
-
-			} else {
-
-				countDuplicateMap.put(c, 1);
 			}
 
 		}
-
-		for (java.util.Map.Entry<Character, Integer> entry : countDuplicateMap.entrySet()) {
-
-			if (entry.getValue() > 1) {
-
-				System.out.println(entry.getKey() + ":" + entry.getValue());
-			}
-
-		}
-
 	}
+
 }
+
+	
